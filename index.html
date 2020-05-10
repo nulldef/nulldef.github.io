@@ -5,17 +5,41 @@
     <meta name="viewport" content="width=device-width">
     <title>@nulldef</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   </head>
   <body>
-    <div id="text">coming soon</div>
+    <div class="container">
+      <div class="label">nulldef</div>
+      <div class="description">
+        Software Developer
+      </div>
+      <div class="links">
+        <a class="link" href="https://github.com/nulldef"><i class="fab fa-github"></i></a>
+        <a class="link" href="https://twitter.com/null_def"><i class="fab fa-twitter"></i></a>
+        <a class="link" href="https://www.linkedin.com/in/alexey-bespalov"><i class="fab fa-linkedin-in"></i></a>
+        <a class="link" href="https://www.facebook.com/nulldef"><i class="fab fa-facebook"></i></a>
+        <a class="link" href="mailto:nulldefiner@gmail.com"><i class="fa fa-envelope"></i></a>
+      </div>
+    </div>
 
-    <ul id="links">
-      <li><a target="_blank" href="https://github.com/nulldef"><i class="fab fa-github"></i></a></li>
-      <li><a target="_blank" href="https://www.linkedin.com/in/alexey-bespalov"><i class="fab fa-linkedin-in"></i></a></li>
-      <li><a target="_blank" href="mailto:nulldefiner@gmail.com"><i class="fa fa-envelope"></i></a></li>
-    </ul>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyADiRbaxHvjPSgewLUl6t0SK9lTSGsrZzc",
+        authDomain: "nulldefdotcom.firebaseapp.com",
+        databaseURL: "https://nulldefdotcom.firebaseio.com",
+        projectId: "nulldefdotcom",
+        storageBucket: "nulldefdotcom.appspot.com",
+        messagingSenderId: "343903623674",
+        appId: "1:343903623674:web:51248d047e81b2fa846c43",
+        measurementId: "G-5D8ZXHW1B8"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
 
