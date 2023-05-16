@@ -3,41 +3,55 @@
 }
 
 body {
-  background-image: url('img/pattern.png');
+  background-color: #f7f1e3;
 }
 
-.container {
-  width: 940px;
-  margin: 0 auto;
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contact-list__item {
+  outline: 1px dashed red;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  width: 84px;
+  height: 84px;
+}
+
+.item {
+  width: 100%;
   text-align: center;
-  padding-top: 100px;
 }
 
-.label {
-  color: #fff;
-  font-size: 5rem;
-  cursor: default;
-  text-shadow: 10px 10px #000;
+.item .fa-icon {
+  font-size: 84px;
 }
 
-.description {
-  color: #bbb;
-  cursor: default;
-  text-shadow: 5px 5px #000;
+.item--front {
+  position: absolute;
+  transition: transform .3s ease-in-out;
+  transform-origin: center center 42px;
+  transform: rotateX(0deg);
+  color: green;
 }
 
-.links {
-  margin-top: 50px;
+.contact-list__item:hover .item--front {
+  transform: rotateX(-90deg);
 }
 
-.links .link {
-  color: #aaa;
-  transition: color .2s;
-  font-size: 3rem;
-  margin: 0 10px;
-  text-shadow: 10px 10px #000;
+.item--bottom {
+  position: absolute;
+  transition: transform .3s ease-in-out;
+  transform-origin: center center 42px;
+  transform: rotateX(90deg);
+  color: red;
 }
 
-.links .link:hover {
-  color: #eee;
+.contact-list__item:hover .item--bottom {
+  transform: rotateX(0deg);
 }
