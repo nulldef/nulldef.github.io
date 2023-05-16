@@ -1,0 +1,75 @@
+$bg-color: #f7f1e3;
+$fg-color: #333;
+
+$icon-size: 84px;
+$icon-transition: transform .2s ease-out;
+
+:root {
+  --nulldef-bg-color: #{$bg-color};
+  --nulldef-fg-color: #{$fg-color};
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--nulldef-bg-color);
+}
+
+.title {
+  text-align: center;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 16px;
+
+  &__item {
+    position: relative;
+    text-decoration: none;
+    color: var(--nulldef-fg-color);
+    width: 84px;
+    height: 84px;
+
+    &:hover .item--front {
+      transform: rotateX(-90deg);
+    }
+
+    &:hover .item--bottom {
+      transform: rotateX(0deg);
+    }
+  }
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+
+  .fa-icon {
+    font-size: $icon-size;
+  }
+
+  &--front {
+    position: absolute;
+    transition: $icon-transition;
+    transform-origin: center center 42px;
+    transform: rotateX(0deg);
+  }
+
+  &--bottom {
+    position: absolute;
+    transition: $icon-transition;
+    transform-origin: center center 42px;
+    transform: rotateX(90deg);
+  }
+}
